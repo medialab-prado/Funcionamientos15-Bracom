@@ -1,28 +1,45 @@
-ui.toolbar.title("Bracom"); // We enter the title (Hello world!)
-ui.toolbar.bgColor(55, 155, 155, 255); // We change the colour of the title bar
-ui.toolbar.show(true); // We set it to display the title bar
-//ui.screenMode("fullscreen"); // The app can display it in full screen
+/*
+*    
+*    Description Bracom 
+*    by Carles & Gonzalo
+*
+*/
 
-var margin = 10; // The size of the margin we will use
-var w = ui.screenWidth - 2*margin; // We will use the w variable as the width of the elements
-var h = 150; // We will use the h variable as the height of the elements
+ui.toolbar.show(false); // We set it to display the title bar
 
-var margin = 10;
+//Media files
+media.volume(100);
+ui.enableVolumeKeys(true);
+var wave1 = media.createWave();
+var waveBaseVal = 60;
+var waveDeltaBaseVal = 10;
+//media.textToSpeech("uno"); //Slow media playback for button events
 
-//	< formato antiguo, no es importante >
-	var width = ui.screenWidth / 2;	//	
-	var height = ui.screenHeight / 3;	//	formato antiguo, no es importante
+var padWith = 400;
+var padHeight = 700;
 
-	var linePointUp = 100;
-	var linePointMid = 400;
-	var linePointDown = 800;
-//	</ formato antiguo, no es importante >
 
-var uno = ui.addButton("texto", 0, 0, width, height).onClick(function() {
-    // The code for the function 
+
+
+//this is a touchable pad 
+var pad = ui.addXYPad(10, 210, ui.screenWidth - 20, 400, function(e) {
+    for (var i = 0; i < e.length; i++) {
+        //  console.log(e[i].id + " " + e[i].x + " " + e[i].y);
+        
+        //Make a map of the button areas- Draw and make manual visual events to all buttons
+        
+        
+        
+    }
 });
 
-var dos = ui.addButton("texto", width, 0, width, height).onClick(function() {
-    // The code for the function 
-});
 
+
+/*Not intersant
+var var0 = ui.addTouchArea(0, 0, ui.screenWidth /2, ui.screenHeight /2, true, function(touching, x, y){ 
+device.vibrate(100);
+});*/
+
+
+//  device.vibrate(100);
+//  media.textToSpeech("u"); 
