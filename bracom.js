@@ -1,7 +1,7 @@
 /*
 *    
 *    Description Bracom 
-*    by Carles & Gonzalo
+*    by Carles, Gonzalo & Carmen
 *
 */
 
